@@ -34,7 +34,6 @@ a {
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
     opacity: 1;
 }
 
@@ -152,6 +151,21 @@ a {
 
 .search-box button {
     box-shadow: none !important;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-icon span {
+    position: absolute;
+    top: -6px;
+    right: -7px;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #fff;
+    background: #2879fe;
+    border-radius: 50%;
 }
 
 .user-dropdown .dropdown .dropdown-toggle {
@@ -434,28 +448,28 @@ header.active {
     transition: opacity .4s ease;
 }
 
-.trendingItem-img a .img-hover,
-.trendingItem-img a .img-active {
+.trendingItem-img .img-hover,
+.trendingItem-img .img-active {
     transition: all .4s;
 
 }
 
-.trendingItem-img a .img-active {
+.trendingItem-img .img-active {
     position: absolute;
 }
 
-.trendingItem-img a .img-hover {
+.trendingItem-img .img-hover {
     /* display: none; */
     opacity: 0;
 
 }
 
-.trendingItem-img a:hover .img-active {
+.trendingItem-img:hover .img-active {
     /* display: none; */
     opacity: 0;
 }
 
-.trendingItem-img a:hover .img-hover {
+.trendingItem-img:hover .img-hover {
     /* display: block; */
     opacity: 1;
 }
@@ -531,7 +545,7 @@ header.active {
     border-radius: 6px;
 }
 
-.color-option li {
+.color-option li button {
     width: 38px;
     margin-right: 2px;
     margin-left: 2px;
@@ -540,11 +554,11 @@ header.active {
     transition: border-width .1s linear;
 }
 
-.color-option li.active {
+.color-option li button.active {
     border-width: 2px;
 }
 
-.color-option li:hover {
+.color-option li button:hover {
     border-width: 2px;
 }
 
@@ -552,17 +566,18 @@ header.active {
     padding: 0 4px;
 }
 
-.size-option li a {
+.size-option li button {
     width: 100%;
     font-size: 14px;
-    padding: 2px 6px;
+    padding: 4px 7px;
     background: #eee;
     color: #777;
     border-radius: 3px;
     transition: all 0.2s linear;
+    border: none;
 }
 
-.size-option li a:hover {
+.size-option li button:hover {
     background: #2879fe;
     color: #fff;
 }

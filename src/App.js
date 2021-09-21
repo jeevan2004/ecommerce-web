@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import "../node_modules/slick-carousel/slick/slick.css"; 
@@ -12,20 +12,23 @@ import Collection from './components/Collection/Collection';
 import Seller from './components/Seller/Seller';
 import Blog from './components/Blog/Blog';
 import Service from './components/Services/Service';
-import Footer from './components/Footer/Footer'
+import Footer from './components/Footer/Footer';
 
 const App = () => {
+  
     return (
         <>
-        <Navbar/>
-        <Slick/>
-        <Promo/>
-        <Trending/>
-        <Collection/>
-        <Seller/>
-        <Blog/>
-        <Service/>
-        <Footer/>
+        
+            <Navbar/>
+            <Slick/>
+            <Promo/>
+            <Trending/>
+            <Collection/>
+            <Seller/>
+            <Blog/>
+            <Service/>
+            <Footer/>
+       
         </>
     )
 }

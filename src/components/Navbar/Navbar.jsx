@@ -1,16 +1,6 @@
 import React, { useState } from 'react';
+import { FaSearch, FaSlidersH, FaShoppingCart, FaRegUser, FaBars, FaRegHeart, FaBalanceScale, FaUnlockAlt, FaDollarSign, FaEuroSign, FaPoundSign } from 'react-icons/fa';
 import { Link } from 'react-scroll';
-import { FaSearch } from "react-icons/fa";
-import { FaSlidersH } from "react-icons/fa";
-import { FaShoppingCart } from "react-icons/fa";
-import { FaRegUser } from "react-icons/fa";
-import { FaBars } from "react-icons/fa";
-import { FaRegHeart } from 'react-icons/fa';
-import { FaBalanceScale } from 'react-icons/fa';
-import { FaUnlockAlt } from 'react-icons/fa';
-import { FaDollarSign } from 'react-icons/fa';
-import { FaEuroSign } from 'react-icons/fa';
-import { FaPoundSign } from 'react-icons/fa';
 
 const Navbar = () => {
     const [navbar, setNavbar] = useState(false);
@@ -29,6 +19,7 @@ const Navbar = () => {
     const searchBox = () => {
         setSearch(!search);
     };
+
 
 
     return (
@@ -84,8 +75,8 @@ const Navbar = () => {
                                 </div>
 
                             </li>
-                            <li>
-
+                            <li className="cart-icon">
+                                <span>0</span>
                                 <FaShoppingCart className="icon" />
 
                             </li>
