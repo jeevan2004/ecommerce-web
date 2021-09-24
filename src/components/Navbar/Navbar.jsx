@@ -27,7 +27,7 @@ const Navbar = () => {
             <div className="container">
                 <nav className="navbar navbar-expand-lg">
                     <Link className="navbar-brand" to="">
-                        <img src={require("../../assets/logo.png").default} alt="" />
+                      <h1>Jeevan</h1>
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"><FaBars /></span>
@@ -118,7 +118,7 @@ const Navbar = () => {
                 </nav>
                 <div className="response-logo">
                     <div className="response-logo-img">
-                        <img src={require("../../assets/logo.png").default} alt="" />
+                        <h1>Jeevan</h1>
                     </div>
                 </div>
             </div>

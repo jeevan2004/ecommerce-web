@@ -93,9 +93,9 @@ const Footer = () => {
                                 <div className="footer-inner">
                                     <h4>Contact</h4>
                                     <p><span>Address:</span>2548 Broaddus Maple Court Avenue, Madisonville KY 4783, USA </p>
-                                    <p><span>Phone:</span>+777 2345 7885; +777 2345 7886 </p>
+                                    <p><span>Phone:</span>+91 7220920915; +777 2345 7886 </p>
                                     <p><span>Hours:</span>7 Days a week from 10 am to 6 pm</p>
-                                    <p><span>Email:</span><a href="">info@mydomain.com</a></p>
+                                    <p><span>Email:</span><a href="">jeeva@gmail.com</a></p>
                                 </div>
 
                             </div>
@@ -108,9 +108,9 @@ const Footer = () => {
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="copyright">
-                                    <a href="" className="copyright-logo"><img src={require("../../assets/logo.png").default} alt="" /></a>
-                                    <p>© Wokiee 2021. Made with <span><FaRegHeart /></span> by</p>
-                                    <a href="" className="copyright-name">Has Theams</a>
+                                    <a href="" className="copyright-logo"><img src={require("../../assets/JEEVAN.png").default} alt="" /></a>
+                                    <p>© Jeevan 2021. Made with <span><FaRegHeart /></span> by</p>
+                                    <a href="" className="copyright-name">Jeevan</a>
                                 </div>
                             </div>
 
