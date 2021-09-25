@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Items from "./Items";
 import { products } from "./Products";
 import "../../App.css"
-const Trending = () => {
+const Trending = ({cartCount}) => {
     const [item, setItem] = useState(products);
 
 

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { products } from "./Products";
 import { FaShoppingCart, FaEye, FaRegHeart, FaBalanceScale, FaStar, FaStarHalfAlt } from "react-icons/fa";
-import { useCart } from "react-use-cart";
+import { Link } from 'react-router-dom';
 
 const Items = ({ img1, img2, img3, title, name, price, tooltip1, tooltip2, size1, size2, size3, colorImg1, colorImg2, colorImg3 }) => {
+
+    const [cartCount, setCartCount] = useState();
 
     return (
         <>
@@ -16,7 +18,9 @@ const Items = ({ img1, img2, img3, title, name, price, tooltip1, tooltip2, size1
                         <div className="trending-img-location"><span>Featured</span></div>
                         <div>
                             <div className="img-active">
+                                <Link to='/about'>
                                 <img src={img1} alt="" />
+                                </Link>
                             </div>
                             <div className="img-hover">
                                 <img src={img2} alt="" />
@@ -93,7 +97,9 @@ const Items = ({ img1, img2, img3, title, name, price, tooltip1, tooltip2, size1
                         </div>
                         <div className="trendingItem-button">
                             <div className="item-button">
-                                <button className="cart-button btn btn-primary" >
+                                <button className="cart-button btn btn-primary" onClick={()=>{
+                                    setCartCount(cartCount + 1)
+                                }}>
                                     <FaShoppingCart className="cart-button-icon" />
                                     add to cart
                                 </button>
