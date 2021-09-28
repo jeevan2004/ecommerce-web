@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { products } from "./Products";
+import products from "./products";
 import { FaShoppingCart, FaEye, FaRegHeart, FaBalanceScale, FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
-const Items = ({ img1, img2, img3, title, name, price, tooltip1, tooltip2, size1, size2, size3, colorImg1, colorImg2, colorImg3 }) => {
+const Items = ({ id, img1, img2, img3, title, name, price, tooltip1, tooltip2, size1, size2, size3, colorImg1, colorImg2, colorImg3 }) => {
 
     const [cartCount, setCartCount] = useState();
+    
 
     return (
         <>
@@ -18,7 +19,7 @@ const Items = ({ img1, img2, img3, title, name, price, tooltip1, tooltip2, size1
                         <div className="trending-img-location"><span>Featured</span></div>
                         <div>
                             <div className="img-active">
-                                <Link to='/about'>
+                                <Link to={`/trendingPage/${id}`}>
                                 <img src={img1} alt="" />
                                 </Link>
                             </div>
@@ -29,7 +30,7 @@ const Items = ({ img1, img2, img3, title, name, price, tooltip1, tooltip2, size1
                     </div>
                     <div className="trendingItem-content">
                         <div className="trendingItem-name">
-                            <a href="">{title}</a>
+                            <a href="/">{title}</a>
                             <div className="rating">
                                 <span><FaStar /></span>
                                 <span><FaStar /></span>
@@ -39,7 +40,7 @@ const Items = ({ img1, img2, img3, title, name, price, tooltip1, tooltip2, size1
                             </div>
                         </div>
                         <h2>
-                            <a href="">{name}</a>
+                            <a href="/">{name}</a>
                         </h2>
                         <div className="trendingItem-price">{price}</div>
                         <div className="trendingItem-options">

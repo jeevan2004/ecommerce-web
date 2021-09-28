@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import { aboutProduct } from "./AboutProduct";
+import { useParams } from "react-router-dom";
+import products from "../components/Trending/products";
 import {
     FaShoppingCart,
     FaEye,
@@ -8,12 +9,17 @@ import {
     FaStar,
     FaStarHalfAlt,
 } from "react-icons/fa";
-const About = () => {
-
+const TrendingPage = () => {
+    const params = useParams();
+    console.log(params.id, "bsfkks");
     const [aboutCount, setAboutCount]= useState(1);
+    console.log(products, "sbfkdj");
+    // let getId = products.params.id;
+    // const getData= products.item[getId.id];
+    // console.log(getData, "data");
     return (
         <>
-            <div className="about">
+            {/* <div className="trendingPage">
                 <div className="container">
                     <div className=" trendingMain">
                         <div className="row trendingItem">
@@ -23,11 +29,11 @@ const About = () => {
                                         <FaEye />
                                     </div>
                                     <div className="trending-img-icon icon-2">
-                                        {" "}
+                                        
                                         <FaRegHeart />
                                     </div>
                                     <div className="trending-img-icon icon-3">
-                                        {" "}
+                                        
                                         <FaBalanceScale />
                                     </div>
                                     <div className="trending-img-location">
@@ -36,13 +42,13 @@ const About = () => {
                                     <div className='img_tab'>
                                         <div className="img-active img_sec">
                                             <img
-                                                src={require("../assets/product-01.jpg").default}
+                                                src={getData.img1}
                                                 alt=""
                                             />
                                         </div>
                                         <div className="img-hover img_sec">
                                             <img
-                                                src={require("../assets/product-01-02.jpg").default}
+                                                src={getData.img2}
                                                 alt=""
                                             />
                                         </div>
@@ -52,7 +58,7 @@ const About = () => {
                             <div className="col-md-6">
                                 <div className="trendingItem-content">
                                     <div className="trendingItem-name">
-                                        <p href="">SKU: asdf101</p>
+                                        <p href="">{getData.title}</p>
                                         <p href="">Availability:3 in Stock</p>
                                         <div className="rating">
                                             <span>
@@ -73,27 +79,27 @@ const About = () => {
                                         </div>
                                     </div>
                                     <h2>
-                                        Relaxed-Fit Cotton Shirt
+                                        {getData.naem}
                                     </h2>
-                                    <div className="trendingItem-price">$12.00</div>
+                                    <div className="trendingItem-price">{getData.price}</div>
                                     <p className="trendingItem-text">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                                     <div className="trendingItem-options">
                                         <div className="color-text">color:</div>
                                         <ul className="color-option">
                                             <li className="tooltip ">
-                                                <span class="tooltiptext">Grey</span>
+                                                <span class="tooltiptext">{getData.tooltip1}</span>
                                                 <button className="active">
                                                     <img
-                                                        src={require("../assets/product-01.jpg").default}
+                                                        src={getData.img1}
                                                         alt=""
                                                     />
                                                 </button>
                                             </li>
                                             <li className="tooltip">
-                                                <span class="tooltiptext">Green</span>
+                                                <span class="tooltiptext">{getData.tooltip2}</span>
                                                 <button>
                                                     <img
-                                                        src={require("../assets/product-01-03.jpg").default}
+                                                        src={getData.img3}
                                                         alt=""
                                                     />
                                                 </button>
@@ -102,13 +108,13 @@ const About = () => {
                                         <div className="size-text">size:</div>
                                         <ul className="size-option">
                                             <li className="">
-                                                <button>X</button>
+                                                <button>{getData.size1}</button>
                                             </li>
                                             <li className="">
-                                                <button>M</button>
+                                                <button>{getData.size2}</button>
                                             </li>
                                             <li className="">
-                                                <button>S</button>
+                                                <button>{getData.size3}</button>
                                             </li>
                                         </ul>
                                         <div className="color-text">material:</div>
@@ -118,7 +124,7 @@ const About = () => {
                                                 <button className="active">
                                                     <img
                                                         src={
-                                                            require("../assets/texture-img-01.jpg").default
+                                                            getData.colorImg1
                                                         }
                                                         alt=""
                                                     />
@@ -129,7 +135,7 @@ const About = () => {
                                                 <button>
                                                     <img
                                                         src={
-                                                            require("../assets/texture-img-02.jpg").default
+                                                            getData.colorImg2
                                                         }
                                                         alt=""
                                                     />
@@ -140,7 +146,7 @@ const About = () => {
                                                 <button>
                                                     <img
                                                         src={
-                                                            require("../assets/texture-img-03.jpg").default
+                                                            getData.colorImg3
                                                         }
                                                         alt=""
                                                     />
@@ -168,8 +174,8 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </>
     );
 };
-export default About;
+export default TrendingPage;

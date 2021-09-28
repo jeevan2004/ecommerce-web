@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { products } from "./Products";
+import SellerProduct from "./SellerProduct";
 import { FaShoppingCart, FaEye, FaRegHeart, FaBalanceScale, FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { useCart } from "react-use-cart";
+import { Link } from 'react-router-dom';
 
-const Items = ({ img1, img2, img3, title, name, price, tooltip1, tooltip2, size1, size2, size3, colorImg1, colorImg2, colorImg3 }) => {
+const SellerItem = ({id, img1, img2, img3, title, name, price, tooltip1, tooltip2, size1, size2, size3, colorImg1, colorImg2, colorImg3 }) => {
 
     return (
         <>
@@ -16,7 +17,9 @@ const Items = ({ img1, img2, img3, title, name, price, tooltip1, tooltip2, size1
                         <div className="trending-img-location"><span>Featured</span></div>
                         <div>
                             <div className="img-active">
+                            <Link to={`/sellerPage/${id}`}>
                                 <img src={img1} alt="" />
+                                </Link>
                             </div>
                             <div className="img-hover">
                                 <img src={img2} alt="" />
@@ -25,7 +28,7 @@ const Items = ({ img1, img2, img3, title, name, price, tooltip1, tooltip2, size1
                     </div>
                     <div className="trendingItem-content">
                         <div className="trendingItem-name">
-                            <a href="">{title}</a>
+                            <a href="/">{title}</a>
                             <div className="rating">
                                 <span><FaStar /></span>
                                 <span><FaStar /></span>
@@ -35,7 +38,7 @@ const Items = ({ img1, img2, img3, title, name, price, tooltip1, tooltip2, size1
                             </div>
                         </div>
                         <h2>
-                            <a href="">{name}</a>
+                            <a href="/">{name}</a>
                         </h2>
                         <div className="trendingItem-price">{price}</div>
                         <div className="trendingItem-options">
@@ -106,4 +109,4 @@ const Items = ({ img1, img2, img3, title, name, price, tooltip1, tooltip2, size1
     );
 }
 
-export default Items
+export default SellerItem

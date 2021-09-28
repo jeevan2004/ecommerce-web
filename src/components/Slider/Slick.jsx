@@ -30,7 +30,7 @@ const Slick = () => {
                                             React Template
                                         </h1>
                                         <p>30 skins, powerful features, great support, exclusive offer</p>
-                                        <a href="" className="btn btn-primary btn-xl">Shop Now</a>
+                                        <a href="/" className="btn btn-primary btn-xl">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@ const Slick = () => {
                                             Demos
                                         </h1>
                                         <p>Optimized for speed, website that sells</p>
-                                        <a href="" className="btn btn-primary btn-xl">Shop Now</a>
+                                        <a href="/" className="btn btn-primary btn-xl">Shop Now</a>
                                     </div>
                                 </div>
                             </div>

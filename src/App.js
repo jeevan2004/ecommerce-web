@@ -10,19 +10,27 @@ import "../node_modules/slick-carousel/slick/slick.css";
 import "../node_modules/slick-carousel/slick/slick-theme.css";
 import "./App.css";
 import Home from './Pages/Home';
-import About from './Pages/About';
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
+import products from './components/Trending/products';
+import TrendingPage from './Pages/TrendingPage';
+import SellerPage from './Pages/SellerPage.';
+import SellerProduct from './components/Seller/SellerProduct';
+import BlogPage from './Pages/BlogPage';
+import BlogFullWidth from './Pages/BlogFullWidth';
+import NotFound from './Pages/NotFound';
+import Gallery from './Pages/Gallery';
 const App = () => {
   
     return (
         <Router>
-        <Navbar/>
         <Switch>
             <Route exact path="/" component={Home}/>
-            <Route  path="/about" component={About}/>
+            <Route exact path="/trendingPage/:id" render={products =>(<TrendingPage {...products}/>)}></Route>
+            <Route exact path="/sellerPage/:id" render={SellerProduct =>(   <SellerPage {...SellerProduct}/>)}></Route>
+            <Route exact path="/blog" component={BlogPage}/>
+            <Route exact path="/blog/full-width" component={BlogFullWidth}/>
+            <Route exact path="/shop" component={NotFound}/>
+            <Route exact path="/portfolio" component={Gallery}/>
        </Switch>
-       <Footer/>
         </Router>
     )
 }

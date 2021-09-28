@@ -7,7 +7,7 @@ const Collection = () => {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-md-4 col-sm-6">
-                            <a href="" className="collection-box">
+                            <a href="/" className="collection-box">
                                 <img src={require("../../assets/index-promo-img-07.jpg").default} alt="" />
                                 <div className="collection-inner">
                                     <div className="collection-content">
@@ -20,7 +20,7 @@ const Collection = () => {
                             </a>
                         </div>
                         <div className="col-md-4 col-sm-6">
-                            <a href="" className="collection-box">
+                            <a href="/" className="collection-box">
                                 <img src={require("../../assets/index-promo-img-08.jpg").default} alt="" />
                                 <div className="collection-inner">
                                     <div className="collection-content">
@@ -32,7 +32,7 @@ const Collection = () => {
                             </a>
                         </div>
                         <div className="col-md-4 col-sm-6">
-                            <a href="" className="collection-box">
+                            <a href="/" className="collection-box">
                                 <img src={require("../../assets/index-promo-img-09.jpg").default} alt="" />
                                 <div className="collection-inner">
                                     <div className="collection-content">

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaSearch, FaSlidersH, FaShoppingCart, FaRegUser, FaBars, FaRegHeart, FaBalanceScale, FaUnlockAlt, FaDollarSign, FaEuroSign, FaPoundSign } from 'react-icons/fa';
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({cartCount}) => {
     const [navbar, setNavbar] = useState(false);
@@ -26,7 +26,7 @@ const Navbar = ({cartCount}) => {
         <header className={navbar ? 'active' : ''}>
             <div className="container">
                 <nav className="navbar navbar-expand-lg">
-                    <Link className="navbar-brand" to="">
+                    <Link className="navbar-brand" to="/">
                       <h1>Jeevan</h1>
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,12 +37,33 @@ const Navbar = ({cartCount}) => {
                             <li className="nav-item">
                                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="trending" duration={10} delay={5}>Shop</Link>
+                           
+                            <li className=" nav-item">
+                                <div class="dropdown">
+                                    <Link class="nav-link dropdown-toggle" to="shop" role="button" id="dropdownMenuLink"  aria-expanded="false">
+                                    Shop
+                                    </Link>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <li className="dropdown-item">PRODUCT DETAILS</li>
+                                        <li><Link class="dropdown-item" to="/shop">Product Details Standard</Link></li>
+
+                                    </ul>
+                                </div>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="blog">Blog</Link>
+                            <li className=" nav-item">
+                                <div class="dropdown">
+                                    <Link class="nav-link dropdown-toggle" to="blog" role="button" id="dropdownMenuLink"  aria-expanded="false">
+                                        Blog
+                                    </Link>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <li className="dropdown-item">BLOG STYLE</li>
+                                        <li><Link class="dropdown-item" to="/blog">Blog Standard</Link></li>
+                                        <li><Link class="dropdown-item" to="/blog/full-width">Standard Full Width</Link></li>
+
+                                    </ul>
+                                </div>
                             </li>
+                         
                             <li className="nav-item">
                                 <Link className="nav-link" to="portfolio">Portfolio</Link>
                             </li>
@@ -82,7 +103,7 @@ const Navbar = ({cartCount}) => {
                             </li>
                             <li className="user-dropdown">
                                 <div class="dropdown">
-                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class="btn btn-secondary dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                         <FaRegUser className="icon" />
                                     </a>
 
@@ -102,7 +123,7 @@ const Navbar = ({cartCount}) => {
 
                             <li className="user-dropdown">
                                 <div class="dropdown">
-                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class="btn btn-secondary dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                         <FaSlidersH className="icon" />
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Items from "../Trending/Items";
-import { sellerProduct } from "./SellerProduct";
+import SellerItem from "../Seller/SellerItem";
+import  sellerProduct  from "./SellerProduct";
 import "../../App.css"
 
 const Seller = () => {
@@ -16,7 +16,7 @@ const Seller = () => {
                     <div className="row trendingMain">
 
                         {item.map((curItem) => {
-                            return <Items key={curItem.id} {...curItem} />
+                            return <SellerItem key={curItem.id} {...curItem} />
                         })}
 
 
