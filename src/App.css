@@ -1299,27 +1299,244 @@ footer {
 /*------------Gallery----------------------------*/
 
 .gallery{
-
+    margin-top: 50px;
 }
 
-.gallery-img{
-      background-blend-mode: color;
+.gallery-box{
+    box-shadow: 0 0 5px #7e7d7d;
       transition: all 0.3s ease;
       position: relative;
 }
 
-.gallery-img::before {
-    content: "";
-    position: absolute;
+.gallery-content{
     width: 100%;
     height: 100%;
+    position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,.7);
-    opacity: 0;
-    transition: all .3s ease;
+    transition: all 0.5s ease 0s;
 }
 
-.gallery-img:hover.gallery-img::before{
+.gallery-box:hover .gallery-content {
+    background: rgba(0,0,0,.70);
+}
+
+.gallery-img{
+    position: relative;
+}
+
+.gallery-img-icon{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    color: #fff;
+    border: 2px solid #2879fe;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 9;
+}
+
+.gallery-content:hover .gallery-img-icon{
     opacity: 1;
+}
+
+.gallery-content::before, .gallery-content::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+     opacity: 0;
+    transform: scale(1.5);
+    transition: all 0.6s ease 0.3s;
+}
+
+.gallery-content::before {
+    border-left: 2px solid #2879fe;
+    border-top: 2px solid #2879fe;
+    top: 19px;
+    left: 19px;
+}
+
+.gallery-content::after{
+    border-bottom: 2px solid #2879fe;
+    border-right: 2px solid #2879fe;
+    bottom: 19px;
+    right: 19px;
+}
+
+.gallery-content:hover.gallery-content::after,
+.gallery-content:hover.gallery-content::before{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.gallery-content .gallery-text::after{ 
+        content: "";
+        width: 0;
+        height: 2px;
+        background: #2879fe;
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transition: all 1s ease 0s;   
+}
+
+.gallery-content:hover .gallery-text::after{
+    width: 80%;
+    transition: all 1s ease 0.8s;
+}
+
+.gallery-content .gallery-text{
+    color: #fff;
+    margin: 0;
+    position: relative;
+    top: 0;
+    opacity: 0;
+    transition: all 1s ease 0.01s;
+    text-align: center;
+}
+
+.gallery-content .gallery-text h4{
+    font-size: 18px;
+}
+
+.gallery-content .gallery-text p{
+    font-size: 12px;
+    color: #999;
+}
+
+.gallery-content:hover .gallery-text{
+    opacity: 1;
+    top: 38%;
+}
+
+._3AWTh{
+    z-index: 99999;
+}
+
+/*------------Contact--------------------------------*/
+
+.contact{
+    margin-top: 50px;
+}
+
+.contact-1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-1 iframe{
+    width: 100%;
+    height: 500px;
+}
+
+.contact-2{
+    text-align: center;
+}
+
+.contact-2 .contact2-icon{
+    font-size: 40px;
+    color: #2879fe;
+}
+
+.contact-2 h1{
+    font-size: 18px;
+    padding: 20px 0;
+    margin: 0;
+    font-weight: 600;
+}
+
+.contact-2 p{
+    font-size: 14px;
+    color: #999;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.form-control{
+    background: #f7f8fa;
+    font-size: 14px;
+    border: 1px solid #f7f8fa;
+    padding: 11px 12px 10px 15px;
+    font-family:sans-serif;
+    box-shadow: none;
+    outline: none;
+    color: #777;
+    font-weight: 300;
+    border-radius: 6px;
+    transition: all .2s linear;
+    height: 35px;
+}
+
+.form-control:focus{
+    background: #fff;
+    border-color: #2879fe;
+    box-shadow: none;
+}
+textarea.form-control{
+    height: 142px;
+}
+
+.form-button{
+    text-align: center;
+}
+
+.form-button button{
+    color: #fff !important;
+    padding: 10px 20px;
+    background: #2879fe;
+    margin: 20px 0;
+    display: inline-block;
+}
+
+/*--------------About----------------------*/
+
+.about{
+    margin-top: 50px;
+}
+
+.about h1{
+    margin: 30px 0;
+    font-size: 25px;
+    width: 75%;
+    font-weight: 600;
+    line-height: 35px;
+}
+
+.about-img img{
+    height: 309px;
+    width: 100%;
+}
+
+.about-content{
+    margin-top: 30px;
+}
+
+.about-content h1{
+    font-size: 20px;
+    font-weight:600;
+    letter-spacing: .03em;
+    padding-bottom: 15px;
+    margin: 0;
+}
+
+.about-content p{
+    font-size: 13px;
+    color: #999;
+}
+
+.about-content p span{
+    color: #000;
+    padding-right: 5px;
 }

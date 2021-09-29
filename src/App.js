@@ -18,6 +18,8 @@ import BlogPage from './Pages/BlogPage';
 import BlogFullWidth from './Pages/BlogFullWidth';
 import NotFound from './Pages/NotFound';
 import Gallery from './Pages/Gallery';
+import Contact from './Pages/Contact';
+import About from './Pages/About';
 const App = () => {
   
     return (
@@ -30,6 +32,10 @@ const App = () => {
             <Route exact path="/blog/full-width" component={BlogFullWidth}/>
             <Route exact path="/shop" component={NotFound}/>
             <Route exact path="/portfolio" component={Gallery}/>
+            <Route exact path="/contact" component={Contact}/>
+            <Route exact path="/404" component={NotFound}/>
+            <Route exact path="/about" component={About}/>
+
        </Switch>
         </Router>
     )

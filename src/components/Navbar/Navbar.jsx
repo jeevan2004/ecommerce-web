@@ -68,7 +68,20 @@ const Navbar = ({cartCount}) => {
                                 <Link className="nav-link" to="portfolio">Portfolio</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="pages">Pages</Link>
+                            <div class="dropdown">
+                                    <Link class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink"  aria-expanded="false">
+                                    Pages
+                                    </Link>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <li className="dropdown-item">Pages</li>
+                                        <li><Link class="dropdown-item" to="/about">About</Link></li>
+                                        <li><Link class="dropdown-item" to="/contact">Contact</Link></li>
+                                        <li><Link class="dropdown-item" to="/404">Page 404</Link></li>
+                                        <li><Link class="dropdown-item" to="/">Typography</Link></li>
+
+                                    </ul>
+                                </div>
+                                
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="contact">Contact</Link>
