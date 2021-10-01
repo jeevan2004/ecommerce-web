@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaSearch, FaSlidersH, FaShoppingCart, FaRegUser, FaBars, FaRegHeart, FaBalanceScale, FaUnlockAlt, FaDollarSign, FaEuroSign, FaPoundSign } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const Navbar = ({cartCount}) => {
+const Navbar = () => {
     const [navbar, setNavbar] = useState(false);
     const [search, setSearch] = useState(false);
 
@@ -52,7 +52,7 @@ const Navbar = ({cartCount}) => {
                             </li>
                             <li className=" nav-item">
                                 <div class="dropdown">
-                                    <Link class="nav-link dropdown-toggle" to="blog" role="button" id="dropdownMenuLink"  aria-expanded="false">
+                                    <Link class="nav-link dropdown-toggle" to="/blog" role="button" id="dropdownMenuLink"  aria-expanded="false">
                                         Blog
                                     </Link>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -65,13 +65,13 @@ const Navbar = ({cartCount}) => {
                             </li>
                          
                             <li className="nav-item">
-                                <Link className="nav-link" to="portfolio">Portfolio</Link>
+                                <Link className="nav-link" to="/portfolio">Portfolio</Link>
                             </li>
                             <li className="nav-item">
                             <div class="dropdown">
-                                    <Link class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink"  aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink"  aria-expanded="false">
                                     Pages
-                                    </Link>
+                                    </a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                         <li className="dropdown-item">Pages</li>
                                         <li><Link class="dropdown-item" to="/about">About</Link></li>
@@ -84,7 +84,7 @@ const Navbar = ({cartCount}) => {
                                 
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="contact">Contact</Link>
+                                <Link className="nav-link" to="/contact">Contact</Link>
                             </li>
                         </ul>
                     </div>
@@ -110,7 +110,7 @@ const Navbar = ({cartCount}) => {
 
                             </li>
                             <li className="cart-icon">
-                                <span>{cartCount}</span>
+                                <span></span>
                                 <FaShoppingCart className="icon" />
 
                             </li>
