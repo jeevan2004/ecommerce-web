@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import { FaSearch, FaSlidersH, FaShoppingCart, FaRegUser, FaBars, FaRegHeart, FaBalanceScale, FaUnlockAlt, FaDollarSign, FaEuroSign, FaPoundSign } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
+import { useSelector } from 'react-redux';
+
 const Navbar = () => {
+    const myState= useSelector((state)=>state.changeTheNumber);
     const [navbar, setNavbar] = useState(false);
     const [search, setSearch] = useState(false);
 
@@ -110,7 +113,7 @@ const Navbar = () => {
 
                             </li>
                             <li className="cart-icon">
-                                <span></span>
+                                <span>{myState}</span>
                                 <FaShoppingCart className="icon" />
 
                             </li>

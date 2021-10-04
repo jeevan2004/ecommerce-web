@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import products from "./products";
 import { FaShoppingCart, FaEye, FaRegHeart, FaBalanceScale, FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { incNumber } from '../../actions/index';
 
 const Items = ({ id, img1, img2, img3, title, name, price, tooltip1, tooltip2, size1, size2, size3, colorImg1, colorImg2, colorImg3 }) => {
-
-    const [cartCount, setCartCount] = useState();
-    
+    const dispatch = useDispatch();
 
     return (
         <>
@@ -98,9 +98,7 @@ const Items = ({ id, img1, img2, img3, title, name, price, tooltip1, tooltip2, s
                         </div>
                         <div className="trendingItem-button">
                             <div className="item-button">
-                                <button className="cart-button btn btn-primary" onClick={()=>{
-                                    setCartCount(cartCount + 1)
-                                }}>
+                                <button className="cart-button btn btn-primary" onClick={()=>dispatch(incNumber())}>
                                     <FaShoppingCart className="cart-button-icon" />
                                     add to cart
                                 </button>
