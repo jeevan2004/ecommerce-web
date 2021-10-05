@@ -1,4 +1,4 @@
-import React, {useEffect}from 'react';
+import React from 'react';
 import {
     BrowserRouter as Router,
     Switch,
@@ -20,12 +20,9 @@ import NotFound from './Pages/NotFound';
 import Gallery from './Pages/Gallery';
 import Contact from './Pages/Contact';
 import About from './Pages/About';
-import AOS from 'aos';
-import "aos/dist/aos.css";
+
 const App = () => {
-  useEffect(() => {
-      AOS.init()
-  },[]);
+
     return (
         <Router>
         <Switch>
@@ -39,7 +36,7 @@ const App = () => {
             <Route exact path="/contact" component={Contact}/>
             <Route exact path="/404" component={NotFound}/>
             <Route exact path="/about" component={About}/>
-
+            <Route exact path="*" component={NotFound}/>
        </Switch>
         </Router>
     )

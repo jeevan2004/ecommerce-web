@@ -72,9 +72,9 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item">
                             <div class="dropdown">
-                                    <Link  class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink"  aria-expanded="false">
+                                    <a  class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink"  aria-expanded="false">
                                     Pages
-                                    </Link>
+                                    </a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                         <li className="dropdown-item">Pages</li>
                                         <li><Link class="dropdown-item" to="/about">About</Link></li>
