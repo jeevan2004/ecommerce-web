@@ -1,4 +1,4 @@
-export default [
+const SellerProduct = [
     {
         id: 1,
         img1: require("../../assets/product-11.jpg").default,
@@ -137,3 +137,6 @@ export default [
     }
 
 ];
+
+
+export default SellerProduct

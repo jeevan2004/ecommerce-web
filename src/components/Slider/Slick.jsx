@@ -2,7 +2,6 @@ import React from 'react';
 import Slider from "react-slick";
 import background_1 from "../../assets/slide-01.jpg";
 import background_2 from "../../assets/slide-02.jpg";
-
 const Slick = () => {
     const settings = {
         arrow: true,

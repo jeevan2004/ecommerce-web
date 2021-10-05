@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
-import SellerProduct from "./SellerProduct";
+import React from 'react';
+// import SellerProduct from "./SellerProduct";
 import { FaShoppingCart, FaEye, FaRegHeart, FaBalanceScale, FaStar, FaStarHalfAlt } from "react-icons/fa";
-import { useCart } from "react-use-cart";
+// import { useCart } from "react-use-cart";
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { incNumber } from '../../actions/index';
 
 const SellerItem = ({id, img1, img2, img3, title, name, price, tooltip1, tooltip2, size1, size2, size3, colorImg1, colorImg2, colorImg3 }) => {
-
+    const dispatch = useDispatch();
     return (
         <>
             <div className="col-lg-3 col-md-4 col-sm-6">
@@ -96,7 +98,7 @@ const SellerItem = ({id, img1, img2, img3, title, name, price, tooltip1, tooltip
                         </div>
                         <div className="trendingItem-button">
                             <div className="item-button">
-                                <button className="cart-button btn btn-primary" >
+                                <button className="cart-button btn btn-primary" onClick={()=>dispatch(incNumber())}>
                                     <FaShoppingCart className="cart-button-icon" />
                                     add to cart
                                 </button>

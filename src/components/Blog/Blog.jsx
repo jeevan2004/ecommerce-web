@@ -36,7 +36,7 @@ const Blog = () => {
                         </div>
                         {/***********************Blog-2*********************** */}
                         <div className="col-lg-4 col-md-6">
-                            <div className="blog-main">
+                            <div className="blog-main" >
                                 <div className="blog-img">
                                     <img src={require("../../assets/blog-masonry-img-04.jpg").default} alt="" />
                                 </div>

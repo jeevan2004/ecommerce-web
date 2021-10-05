@@ -1,4 +1,4 @@
-export default[
+const GalleryData = [
 	{
 		"id":  1,
 		"image":  require("../assets/product-01.jpg").default,
@@ -84,3 +84,5 @@ export default[
 		"Lorem ipsum dolor sit amet cons."
 	},
 ]
+
+export default GalleryData

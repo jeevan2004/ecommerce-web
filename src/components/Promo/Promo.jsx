@@ -14,7 +14,7 @@ const Promo = () => {
                                         <div className="promo-button">Casual</div>
                                     </a>
                                 </div>
-                                <div className="promoMainItem">
+                                <div className="promoMainItem" >
                                     <a href="/" className="">
                                         <img src={require("../../assets/img-05.jpg").default} alt="" />
                                         <div className="promo-button">Dresses</div>
@@ -23,7 +23,7 @@ const Promo = () => {
                             </div>
                         </div>
                         <div className="col-lg-3 col-sm-6">
-                            <div className="promoMainItem">
+                            <div className="promoMainItem" >
                                 <a href="/" className="">
                                     <img src={require("../../assets/img-02.jpg").default} alt="" className="promo-img-2" />
                                     <div className="promo-button">Women</div>
@@ -33,7 +33,7 @@ const Promo = () => {
 
                         <div className="col-lg-6">
                             <div className="row">
-                                <div className="col-md-6 col-sm-6">
+                                <div className="col-md-6 col-sm-6" >
                                     <div className="promoMainItem">
                                         <a href="/" className="">
                                             <img src={require("../../assets/img-03.jpg").default} alt="" />
@@ -41,7 +41,7 @@ const Promo = () => {
                                         </a>
                                     </div>
                                 </div>
-                                <div className="col-md-6 col-sm-6">
+                                <div className="col-md-6 col-sm-6" >
                                     <div className="promoMainItem">
                                         <a href="/" className="">
                                             <img src={require("../../assets/img-04.jpg").default} alt="" />
@@ -52,7 +52,7 @@ const Promo = () => {
                             </div>
                             <div className="row">
                                 <div className="col-md-12">
-                                    <div className="promoMainItem">
+                                    <div className="promoMainItem" >
                                         <a href="/" className="">
                                             <img src={require("../../assets/img-06.jpg").default} alt="" className="promo-img-3" />
                                             <div className="promo-button">Jeans</div>

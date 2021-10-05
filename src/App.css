@@ -1,3 +1,5 @@
+
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -11,7 +13,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     background-color: #fff;
-
+    overflow-x: hidden;
 }
 
 img {
@@ -225,7 +227,7 @@ a {
 .cart-icon span {
     position: absolute;
     top: -6px;
-    right: -7px;
+    right: -17px;
     padding: 0 5px;
     font-size: 12px;
     color: #fff;
@@ -269,6 +271,44 @@ a {
     margin-right: 8px;
 }
 
+.add-cart-text{
+    padding-left: 12px;
+}
+
+.add-cart-text h4{
+        display: flex;
+        justify-content: center;
+        font-size: 15px;
+        margin:0 ;
+}
+
+.add-cart-text h4 a{
+    color: #555;
+    font-size: 14px;
+    line-height: 20px;
+}
+.add-cart-text h4 a:hover{
+    color: #2879fe;
+}
+
+.add-cart-text .delet-cart{
+        font-size: 13px;
+        padding: 0 15px;
+}
+
+.add-cart-text .add-cart-name {
+    font-size: 14px;
+    margin: 0;
+    color: #999;
+}
+
+.cart-totel{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+/*---------------header----------------------*/
 header {
     transition: all 0.4s ease;
     position: absolute;
@@ -964,7 +1004,7 @@ footer {
 
 .copyright {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     padding: 20px 0;
 }
@@ -1000,7 +1040,7 @@ footer {
 
 .payment {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     height: 100%;
 }
@@ -1025,7 +1065,7 @@ footer {
         z-index: 999;
         background: rgb(255, 255, 255) none repeat scroll 0% 0%;
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         align-items: center;
         transition: all 0.4s ease;
         padding: 0 8px;

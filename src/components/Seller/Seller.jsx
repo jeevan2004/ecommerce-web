@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SellerItem from "../Seller/SellerItem";
 import  sellerProduct  from "./SellerProduct";
 import "../../App.css"
 
 const Seller = () => {
-    const [item, setItem] = useState(sellerProduct);
+
+    let item = sellerProduct;
     return (
         <>
              <section className="trending" id="trending">

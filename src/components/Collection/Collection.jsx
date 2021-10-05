@@ -20,7 +20,7 @@ const Collection = () => {
                             </a>
                         </div>
                         <div className="col-md-4 col-sm-6">
-                            <a href="/" className="collection-box">
+                            <a href="/" className="collection-box" >
                                 <img src={require("../../assets/index-promo-img-08.jpg").default} alt="" />
                                 <div className="collection-inner">
                                     <div className="collection-content">

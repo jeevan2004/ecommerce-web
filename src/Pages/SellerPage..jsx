@@ -1,18 +1,18 @@
-import React, {useState} from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import SellerProducts from "../components/Seller/SellerProduct";
-import {
-    FaShoppingCart,
-    FaEye,
-    FaRegHeart,
-    FaBalanceScale,
-    FaStar,
-    FaStarHalfAlt,
-} from "react-icons/fa";
+// import {
+//     FaShoppingCart,
+//     FaEye,
+//     FaRegHeart,
+//     FaBalanceScale,
+//     FaStar,
+//     FaStarHalfAlt,
+// } from "react-icons/fa";
 const SellerPage = () => {
     const params = useParams();
     console.log(params.id, "bsfkks");
-    const [aboutCount, setAboutCount]= useState(1);
+    // const [aboutCount, setAboutCount]= useState(1);
     console.log(SellerProducts, "sbfkdj");
     // let getId = products.params.id;
     // const getData= products.item[getId.id];

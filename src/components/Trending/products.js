@@ -1,4 +1,4 @@
-export default [
+const products = [
     {
         id: 1,
         img1: require("../../assets/product-01.jpg").default,
@@ -136,3 +136,5 @@ export default [
         colorImg3: require("../../assets/texture-img-01.jpg").default,
     }
 ];
+
+export default products

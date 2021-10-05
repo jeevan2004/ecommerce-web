@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaSearch, FaSlidersH, FaShoppingCart, FaRegUser, FaBars, FaRegHeart, FaBalanceScale, FaUnlockAlt, FaDollarSign, FaEuroSign, FaPoundSign } from 'react-icons/fa';
+import { FaSearch, FaSlidersH, FaShoppingCart, FaRegUser, FaBars, FaRegHeart, FaBalanceScale, FaUnlockAlt, FaDollarSign, FaEuroSign, FaPoundSign, FaTrashAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 import { useSelector } from 'react-redux';
@@ -72,9 +72,9 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item">
                             <div class="dropdown">
-                                    <a class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink"  aria-expanded="false">
+                                    <Link  class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink"  aria-expanded="false">
                                     Pages
-                                    </a>
+                                    </Link>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                         <li className="dropdown-item">Pages</li>
                                         <li><Link class="dropdown-item" to="/about">About</Link></li>
@@ -112,9 +112,40 @@ const Navbar = () => {
                                 </div>
 
                             </li>
-                            <li className="cart-icon">
-                                <span>{myState}</span>
-                                <FaShoppingCart className="icon" />
+                          
+                            <li className="user-dropdown">
+                                <div class="dropdown">
+                                    <a class="btn btn-secondary dropdown-toggle cart-icon" href="/" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span>{myState}</span>
+                                    <FaShoppingCart className="icon" />
+                                    </a>
+
+                                    <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                                        <li>
+                                            <div className="add-cart">
+                                                <div className="row">
+                                                    <div className="col-4 px-0">
+                                                        <img src={require("../../assets/product-01.jpg").default} alt="" />
+                                                    </div>
+                                                    <div className="col-8 px-0">
+                                                        <div className="add-cart-text">
+                                                            <h4><a href="/">Relaxed-fit cotton shirt</a>
+                                                            <a href="/" className="delet-cart"><FaTrashAlt/></a></h4>
+                                                            <p className="add-cart-name">Grey,M,Cotton</p>
+                                                            <p className="add-cart-price">$32.00</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <hr />
+                                        <div className="cart-totel">
+                                            <span>SUBTOTEL:</span>
+                                            <span>$97.60</span>
+                                        </div>
+                                    </ul>
+                                </div>
+
 
                             </li>
                             <li className="user-dropdown">
@@ -124,12 +155,12 @@ const Navbar = () => {
                                     </a>
 
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <li><a class="dropdown-item" href="#"><FaRegUser className="icon" />Account</a></li>
-                                        <li><a class="dropdown-item" href="#"><FaShoppingCart className="icon" />Cart</a></li>
-                                        <li><a class="dropdown-item" href="#"><FaRegHeart className="icon" />Wishlist</a></li>
-                                        <li><a class="dropdown-item" href="#"><FaBalanceScale className="icon" />Compare</a></li>
-                                        <li><a class="dropdown-item" href="#"><FaUnlockAlt className="icon" />Log in</a></li>
-                                        <li><a class="dropdown-item" href="#"><FaRegUser className="icon" />Register</a></li>
+                                        <li><a class="dropdown-item" href="/"><FaRegUser className="icon" />Account</a></li>
+                                        <li><a class="dropdown-item" href="/"><FaShoppingCart className="icon" />Cart</a></li>
+                                        <li><a class="dropdown-item" href="/"><FaRegHeart className="icon" />Wishlist</a></li>
+                                        <li><a class="dropdown-item" href="/"><FaBalanceScale className="icon" />Compare</a></li>
+                                        <li><a class="dropdown-item" href="/"><FaUnlockAlt className="icon" />Log in</a></li>
+                                        <li><a class="dropdown-item" href="/"><FaRegUser className="icon" />Register</a></li>
                                     </ul>
                                 </div>
 
@@ -143,9 +174,9 @@ const Navbar = () => {
                                         <FaSlidersH className="icon" />
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <li><a class="dropdown-item" href="#"><FaDollarSign className="icon" />USD - US Dollar</a></li>
-                                        <li><a class="dropdown-item" href="#"><FaEuroSign className="icon" />EUR - Euro</a></li>
-                                        <li><a class="dropdown-item" href="#"><FaPoundSign className="icon" />GBP - British Pound Sterling</a></li>
+                                        <li><a class="dropdown-item" href="/"><FaDollarSign className="icon" />USD - US Dollar</a></li>
+                                        <li><a class="dropdown-item" href="/"><FaEuroSign className="icon" />EUR - Euro</a></li>
+                                        <li><a class="dropdown-item" href="/"><FaPoundSign className="icon" />GBP - British Pound Sterling</a></li>
 
                                     </ul>
                                 </div>

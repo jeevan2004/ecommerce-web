@@ -1,11 +1,9 @@
-import React, { createContext, useState } from 'react';
+import React from 'react';
 import Items from "./Items";
 import products  from "./products.js";
-import "../../App.css"
-const CartContext = createContext();
-const Trending = ({cartCount}) => {
-    const [item, setItem] = useState(products);
-
+import "../../App.css";
+const Trending = () => {
+    let item = products;
 
 
     return (

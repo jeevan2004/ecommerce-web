@@ -1,5 +1,5 @@
 import React from 'react';
-import products from "./products";
+// import products from './products';
 import { FaShoppingCart, FaEye, FaRegHeart, FaBalanceScale, FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
